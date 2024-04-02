@@ -23,33 +23,32 @@ public class A0110 {
 
     public static void main(String[] args){
         Scanner in=new Scanner(System.in);
-        String s = in.next();
-        String t = in.next();
+        String str = in.next();
+        String c = in.next();
 
-        int[] arr = new int[s.length()];
+        char h = c.charAt(0);
+        int[] result = new int[str.length()];
 
         int count = 101;
-        char c = t.charAt(0);
-
-        for (int i=0; i<s.length(); i++) {
-            if (s.charAt(i) == c) {
+        for (int i=0; i<str.length(); i++) {
+            if (h == str.charAt(i)) {
                 count = 0;
             } else {
                 count++;
             }
-            arr[i] = count;
+            result[i] = count;
         }
 
-        for (int i=s.length(); i>0; i--) {
-            if (s.charAt(i - 1) == c) {
+        for (int i = str.length(); i > 0; i--) {
+            if (h == str.charAt(i - 1)) {
                 count = 0;
             } else {
                 count++;
             }
-            arr[i - 1] = Math.min(count, arr[i - 1]);
+            result[i - 1] = Math.min(result[i - 1], count);
         }
 
-        for (int i : arr) {
+        for (int i : result) {
             System.out.print(i + " ");
         }
     }
