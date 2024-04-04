@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.a;
 
 import java.util.Locale;
 import java.util.Scanner;
