@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class C0302 {
+public class C0302_2 {
 
     /**
      * 설명
